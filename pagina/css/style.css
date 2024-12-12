@@ -1,0 +1,234 @@
+/* Estilo global */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+header {
+  background-color: #444;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+
+header .TITULO {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.tarjeta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+  perspective: 1000px;
+}
+
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.card .front {
+  transform: rotateY(0deg);
+}
+
+.card .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  background: black;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+  background: #eeecec;
+  padding: 15px;
+  color: rgb(2, 2, 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px black;
+}
+
+.card .back .link {
+  border-top: solid 1px rgb(0, 0, 0);
+  height: 50px;
+  line-height: 60px;
+}
+
+.card .back .link a {
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  background-color: rgb(100, 59, 248);
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.card .back h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  padding: 5px;
+  color: white;
+  background-color: rgb(100, 59, 248);
+  border-radius: 0 20px 0 20px;
+}
+
+.card .back p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin: 2px;
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+/* Estilos para la sección de contacto */
+.section {
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #444;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 120px;
+}
+
+.submit-btn {
+  background-color: rgb(100, 59, 248);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #5939c7;
+}
+.section {
+  padding: 20px;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #444;
+  color: white;
+}
+
+/* Estilo para el enlace activo en la navegación */
+nav ul li a.active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #ffc107;
+}
